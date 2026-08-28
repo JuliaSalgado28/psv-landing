@@ -66,17 +66,15 @@ sed -i '' 's#https://pay.hotmart.com/I107368837V#NOVA_URL#g' index.html
 O arquivo `CNAME` na raiz já traz o domínio. Faltam dois passos, ambos fora do
 código:
 
-1. **Visibilidade do repositório.** O GitHub Pages só publica repositório
-   privado em planos pagos (Pro/Team). O `site-onda-lab`, que já serve
-   `ondalab.com.br`, é público — o que sugere conta Free. Se for o caso, para
-   publicar é preciso tornar o `psv-landing` público, assinar o Pro ou hospedar
-   em outro serviço (Vercel e Netlify servem repositório privado no plano
-   gratuito). Não há segredo algum no repositório; o conteúdo da página fica
-   público de qualquer forma assim que o site entra no ar.
-2. **No repositório** — Settings › Pages › Source: `Deploy from a branch`,
+1. **No repositório** — Settings › Pages › Source: `Deploy from a branch`,
    branch `main`, pasta `/ (root)`. Marcar *Enforce HTTPS* depois que o
    certificado for emitido.
-3. **No DNS de `ondalab.com.br`** — criar um registro `CNAME`:
+
+   > Este repositório é público, como o `site-onda-lab`. É o que permite usar o
+   > GitHub Pages sem plano pago. O material de origem da Onda Lab — brandbook,
+   > copy, depoimentos e fotos originais — fica de fora pelo `.gitignore`, e não
+   > há nenhuma credencial no código nem no histórico.
+2. **No DNS de `ondalab.com.br`** — criar um registro `CNAME`:
 
    | Tipo | Nome | Valor |
    |------|------|-------|
@@ -84,8 +82,8 @@ código:
 
 O certificado do GitHub costuma levar alguns minutos depois que o DNS propaga.
 
-**Atenção:** habilitar o GitHub Pages torna a página pública, mesmo com o
-repositório privado. Não foi habilitado — isso é decisão da Julia.
+**Atenção:** habilitar o GitHub Pages coloca a página no ar. Não foi
+habilitado — isso é decisão da Julia.
 
 ## Sistema visual
 
