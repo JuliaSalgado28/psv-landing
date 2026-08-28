@@ -38,10 +38,13 @@ Abrir o `index.html` direto pelo `file://` também funciona.
 | # | Item | Situação |
 |---|------|----------|
 | 1 | **Checkout da Hotmart** — `https://pay.hotmart.com/I107368837V` já está nos 7 CTAs e no JSON-LD. | ⚠️ **A URL responde com erro.** Ver abaixo. |
-| 2 | IDs de analytics (GA4, Meta Pixel, Hotmart). Não foram inventados: há um bloco comentado no `<head>` indicando onde entram. | pendente |
-| 3 | Fotos das pessoas que deram depoimento. Hoje o lugar da foto é resolvido com a aspa gráfica da marca. | pendente |
+| 2 | Analytics. | decidido: não haverá |
+| 3 | Fotos das pessoas que deram depoimento. O lugar da foto é resolvido com a aspa gráfica da marca. | decidido: não haverá |
 | 4 | Contato no rodapé. | decidido: não haverá |
 | 5 | Domínio `psv.ondalab.com.br`. | definido, falta apontar o DNS |
+
+Sem analytics, a página não carrega nenhum script de rastreamento e não grava
+cookies. A única requisição a terceiros é o Google Fonts.
 
 ### ⚠️ O checkout está retornando erro
 
@@ -63,10 +66,17 @@ sed -i '' 's#https://pay.hotmart.com/I107368837V#NOVA_URL#g' index.html
 O arquivo `CNAME` na raiz já traz o domínio. Faltam dois passos, ambos fora do
 código:
 
-1. **No repositório** — Settings › Pages › Source: `Deploy from a branch`,
+1. **Visibilidade do repositório.** O GitHub Pages só publica repositório
+   privado em planos pagos (Pro/Team). O `site-onda-lab`, que já serve
+   `ondalab.com.br`, é público — o que sugere conta Free. Se for o caso, para
+   publicar é preciso tornar o `psv-landing` público, assinar o Pro ou hospedar
+   em outro serviço (Vercel e Netlify servem repositório privado no plano
+   gratuito). Não há segredo algum no repositório; o conteúdo da página fica
+   público de qualquer forma assim que o site entra no ar.
+2. **No repositório** — Settings › Pages › Source: `Deploy from a branch`,
    branch `main`, pasta `/ (root)`. Marcar *Enforce HTTPS* depois que o
    certificado for emitido.
-2. **No DNS de `ondalab.com.br`** — criar um registro `CNAME`:
+3. **No DNS de `ondalab.com.br`** — criar um registro `CNAME`:
 
    | Tipo | Nome | Valor |
    |------|------|-------|
