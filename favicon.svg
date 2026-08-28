@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Onda Lab">
+  <title>Onda Lab</title>
+  <rect width="64" height="64" rx="13" fill="#2C2E83"/>
+  <g fill="none" stroke="#EFECE3" stroke-width="4.6" stroke-linecap="round">
+    <path d="M26.95 11.90A22 22 0 0 1 26.95 52.10"/>
+    <path d="M23.90 18.75A14.5 14.5 0 0 1 23.90 45.25"/>
+    <path d="M21.05 25.15A7.5 7.5 0 0 1 21.05 38.85"/>
+  </g>
+</svg>
