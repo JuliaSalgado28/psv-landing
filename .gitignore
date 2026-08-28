@@ -1,0 +1,13 @@
+# Material de origem — não vai para produção nem para o repositório.
+# Contém arquivos de marca e documentos internos da Onda Lab.
+_fontes/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Nunca versionar segredos
+.env
+.env.*
+*.pem
+*.key
