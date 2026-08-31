@@ -37,7 +37,7 @@ Abrir o `index.html` direto pelo `file://` também funciona.
 
 | # | Item | Situação |
 |---|------|----------|
-| 1 | **Checkout da Hotmart** — `https://pay.hotmart.com/I107368837V` já está nos 7 CTAs e no JSON-LD. | ⚠️ **A URL responde com erro.** Ver abaixo. |
+| 1 | **Checkout da Hotmart** — `https://pay.hotmart.com/L106492441S` nos 7 CTAs e no JSON-LD. | ✅ testado e funcionando |
 | 2 | Analytics. | decidido: não haverá |
 | 3 | Fotos das pessoas que deram depoimento. O lugar da foto é resolvido com a aspa gráfica da marca. | decidido: não haverá |
 | 4 | Contato no rodapé. | decidido: não haverá |
@@ -45,21 +45,6 @@ Abrir o `index.html` direto pelo `file://` também funciona.
 
 Sem analytics, a página não carrega nenhum script de rastreamento e não grava
 cookies. A única requisição a terceiros é o Google Fonts.
-
-### ⚠️ O checkout está retornando erro
-
-`https://pay.hotmart.com/I107368837V` redireciona para
-`https://pay.hotmart.com/error?errorMessage=005`. Testado com user-agent de
-navegador e com as variações usuais de parâmetro (`?checkoutMode=10`, `?off=`) —
-o resultado é o mesmo. O link está no código exatamente como foi passado; o que
-precisa ser verificado é o estado da oferta no painel da Hotmart (produto ainda
-em rascunho, oferta não publicada ou fora do período de vendas produzem esse erro).
-
-**Conferir antes de divulgar a página.** Se a URL mudar, é uma substituição só:
-
-```bash
-sed -i '' 's#https://pay.hotmart.com/I107368837V#NOVA_URL#g' index.html
-```
 
 ## Publicação em psv.ondalab.com.br
 
