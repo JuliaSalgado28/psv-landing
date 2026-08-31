@@ -151,6 +151,9 @@ ul, ol { margin: 0 0 1.2em; padding: 0; list-style: none; }
   letter-spacing: .07em; text-transform: uppercase;
   color: var(--terracota-tinta); margin-bottom: .55rem;
 }
+.hero__turma { margin-bottom: .7rem; }
+/* "ª" vira "A" sob text-transform: uppercase — mantém o ordinal intacto */
+.hero__turma .ord { text-transform: none; }
 .hero__titulo { margin-bottom: .12em; }
 .hero__subtitulo {
   font-family: var(--cond); font-weight: 600;
